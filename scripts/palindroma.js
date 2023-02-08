@@ -74,13 +74,10 @@ console.log(parolaReverse, typeof parolaReverse) //oggetto
 //     console.log("la parola" , parolaUtente ,  "non è palindroma")
 // }   else console.log("la parola" , parolaUtente ,  " è palindroma")
 
-
+parolaPalindroma = true
 
 
 for (let i = 0; i < parolaUtente.length ; i++){
-
-
-
 
 
     let lettera = i
@@ -88,30 +85,20 @@ for (let i = 0; i < parolaUtente.length ; i++){
     let letteraParola = parola[lettera]
     let letteraParolaReverse = parolaReverse[lettera]
 
-    let parolaPalindroma = letteraParola === letteraParolaReverse
-    
-    parolaPalindroma = true
-
-    
-
-
-
-    while (letteraParola != letteraParolaReverse){
+    if (letteraParola != letteraParolaReverse){
         parolaPalindroma = false
         break;
     }   
         
-    if (parolaPalindroma === false){
-
-        console.log("la parola" , parolaUtente ,  "non è palindroma")
-
-
-
-    } else console.log("la parola" , parolaUtente ,  "è palindroma")
-   
-
-    
 
 }
+
+
+if (parolaPalindroma === false){
+
+    console.log("la parola non è palindroma")
+
+
+} else console.log("la parola è palindroma")
 
 
