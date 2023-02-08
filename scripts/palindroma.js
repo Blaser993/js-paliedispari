@@ -6,17 +6,6 @@ console.log("Palindroma")
 // Comunicare all’utente (decidete voi come) se la parola che ha inserito è palindroma oppure no
 
 
-function palindroma (parolaUtente) {
-
-    const parolaPalindroma = parolaUtente === reverseParola
-    
-    console.log("la parola" , parolaUtente ,  "è palindroma")
-}
-
-
-
-
-
 
 
 let parolaUtente = prompt("scrivi una parola");
@@ -25,9 +14,9 @@ let parolaUtente = prompt("scrivi una parola");
 
 // QUESTO CICLO SCOMPONE LA PAROLA DELL'UTENTE IN LETTERE, OGNI LETTERA EQUIVALE ALL'INDICE DELL'ARRAY IN CUI HO TRASFORMATO LA PAROLA
 
+const parola = []
 
-
-let parola = [parolaUtente]
+// let parola = [parolaUtente]
 
 for (let i = 0; i < parolaUtente.length ; i++){
 
@@ -37,11 +26,16 @@ for (let i = 0; i < parolaUtente.length ; i++){
 
     console.log("questa è una lettera della parola inserita: ",lettera)  
 
+    parola.push(lettera) 
+
 
 }
 
 // -------------------------------
 
+
+
+// QUESTO CICLO COMPONE LA PAROLA DELL'UTENTE IN LETTERE SCRITTE AL CONTRARIO IN UN ARRAY
 
 const parolaReverse = []
 
@@ -56,22 +50,31 @@ for (let i = parolaUtente.length -1 ; i >= 0 ; i--){
 
     console.log("questa è una lettera della parola nuova parola: ",lettera) 
 
-     parolaReverse.push(lettera)   
+    parolaReverse.push(lettera)   
 }
 
 
 
+console.log(parola, typeof parola) //oggetto
+
+console.log(parolaUtente, typeof parolaUtente) //stringa
+
+console.log(parolaReverse, typeof parolaReverse) //oggetto
+
+
+// CREO LA CONDIZIONE PER CUI UNA PAROLA è PALINDROMA O MENO
+
+let parolaPalindroma = [parola] === [parolaReverse]
+
+parolaPalindroma = true
+
+if ([parola] != [parolaReverse]){
+    parolaPalindroma = false
+    console.log(parolaPalindroma)
+    console.log("la parola" , parolaUtente ,  "non è palindroma")
+}   else console.log("la parola" , parolaUtente ,  " è palindroma")
 
 
 
 
-
-
-console.log(parola, typeof parola)
-
-console.log(parolaUtente, typeof parolaUtente)
-
-console.log(parolaReverse, typeof parolaReverse)
-
-
-
+   
