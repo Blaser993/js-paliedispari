@@ -22,8 +22,12 @@ function palindroma (parolaUtente) {
 let parolaUtente = prompt("scrivi una parola");
 
 
-let parola = [parolaUtente]
 
+// QUESTO CICLO SCOMPONE LA PAROLA DELL'UTENTE IN LETTERE, OGNI LETTERA EQUIVALE ALL'INDICE DELL'ARRAY IN CUI HO TRASFORMATO LA PAROLA
+
+
+
+let parola = [parolaUtente]
 
 for (let i = 0; i < parolaUtente.length ; i++){
 
@@ -31,10 +35,40 @@ for (let i = 0; i < parolaUtente.length ; i++){
 
     lettera = parolaUtente[i]
 
-    console.log("questa è la lettera della parola inserita: ",lettera)  
+    console.log("questa è una lettera della parola inserita: ",lettera)  
+
+
+}
+
+// -------------------------------
+
+
+const parolaReverse = []
+
+
+for (let i = parolaUtente.length -1 ; i < 0 ; i--){
+
+    let lettera = i
+
+    console.log(lettera)
+
+    lettera = parolaUtente[i]
+
+    console.log("questa è una lettera della parola nuova parola: ",lettera) 
+
+     parolaReverse.push(lettera)   
 }
 
 
+
+
+
+
+
+
+
+
+console.log(parolaReverse)
 
 
 
