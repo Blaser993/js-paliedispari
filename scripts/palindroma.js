@@ -24,9 +24,9 @@ for (let i = 0; i < parolaUtente.length ; i++){
 
     lettera = parolaUtente[i]
 
-    console.log("questa è una lettera della parola inserita: ",lettera)  
+    console.log("questa è una lettera della parola inserita: ",lettera)
 
-    parola.push(lettera) 
+    parola.push(lettera)
 
 
 }
@@ -48,9 +48,9 @@ for (let i = parolaUtente.length -1 ; i >= 0 ; i--){
 
     lettera = parolaUtente[i]
 
-    console.log("questa è una lettera della parola nuova parola: ",lettera) 
+    console.log("questa è una lettera della parola nuova parola: ",lettera)
 
-    parolaReverse.push(lettera)   
+    parolaReverse.push(lettera)
 }
 
 
@@ -64,17 +64,52 @@ console.log(parolaReverse, typeof parolaReverse) //oggetto
 
 // CREO LA CONDIZIONE PER CUI UNA PAROLA è PALINDROMA O MENO
 
-let parolaPalindroma = [parola] === [parolaReverse]
+// let parolaPalindroma = parola === parolaReverse
 
-parolaPalindroma = true
+// parolaPalindroma = true
 
-if ([parola] != [parolaReverse]){
-    parolaPalindroma = false
-    console.log(parolaPalindroma)
-    console.log("la parola" , parolaUtente ,  "non è palindroma")
-}   else console.log("la parola" , parolaUtente ,  " è palindroma")
-
-
+// if (parola != parolaReverse){
+//     parolaPalindroma = false
+//     console.log(parolaPalindroma)
+//     console.log("la parola" , parolaUtente ,  "non è palindroma")
+// }   else console.log("la parola" , parolaUtente ,  " è palindroma")
 
 
-   
+
+
+for (let i = 0; i < parolaUtente.length ; i++){
+
+
+
+
+
+    let lettera = i
+
+    let letteraParola = parola[lettera]
+    let letteraParolaReverse = parolaReverse[lettera]
+
+    let parolaPalindroma = letteraParola === letteraParolaReverse
+    
+    parolaPalindroma = true
+
+    console.log("la parola" , parolaUtente ,  "è palindroma")
+
+
+
+    while (letteraParola != letteraParolaReverse){
+        parolaPalindroma = false
+        
+        if (parolaPalindroma = false){
+
+            console.log("la parola" , parolaUtente ,  "non è palindroma")
+    
+    
+    
+        }
+    }   
+
+    
+
+}
+
+
