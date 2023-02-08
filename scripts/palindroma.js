@@ -92,21 +92,23 @@ for (let i = 0; i < parolaUtente.length ; i++){
     
     parolaPalindroma = true
 
-    console.log("la parola" , parolaUtente ,  "è palindroma")
+    
 
 
 
     while (letteraParola != letteraParolaReverse){
         parolaPalindroma = false
-        
-        if (parolaPalindroma = false){
-
-            console.log("la parola" , parolaUtente ,  "non è palindroma")
-    
-    
-    
-        }
+        break;
     }   
+        
+    if (parolaPalindroma === false){
+
+        console.log("la parola" , parolaUtente ,  "non è palindroma")
+
+
+
+    } else console.log("la parola" , parolaUtente ,  "è palindroma")
+   
 
     
 
