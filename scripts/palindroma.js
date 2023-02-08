@@ -46,7 +46,7 @@ for (let i = 0; i < parolaUtente.length ; i++){
 const parolaReverse = []
 
 
-for (let i = parolaUtente.length -1 ; i < 0 ; i--){
+for (let i = parolaUtente.length -1 ; i >= 0 ; i--){
 
     let lettera = i
 
@@ -67,8 +67,11 @@ for (let i = parolaUtente.length -1 ; i < 0 ; i--){
 
 
 
+console.log(parola, typeof parola)
 
-console.log(parolaReverse)
+console.log(parolaUtente, typeof parolaUtente)
+
+console.log(parolaReverse, typeof parolaReverse)
 
 
 
